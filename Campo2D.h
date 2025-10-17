@@ -145,13 +145,13 @@ T Campo2D<T>::calcularGradientePromedio(int inicioF, int finF, int inicioC, int 
             T gradienteCelda = 0;
             int vecinos = 0;
 
-            // Vecino derecha (se mantiene tu lógica de solo vecino dentro de la subregión)
+            // Vecino derecha
             if (j + 1 <= finC) {
                 gradienteCelda += (T)std::abs(matriz[i][j + 1] - matriz[i][j]);
                 vecinos++;
             }
 
-            // Vecino abajo (se mantiene tu lógica de solo vecino dentro de la subregión)
+            // Vecino abajo
             if (i + 1 <= finF) {
                 gradienteCelda += (T)std::abs(matriz[i + 1][j] - matriz[i][j]);
                 vecinos++;
