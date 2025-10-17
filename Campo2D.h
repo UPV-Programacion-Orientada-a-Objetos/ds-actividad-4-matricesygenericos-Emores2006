@@ -158,7 +158,7 @@ T Campo2D<T>::calcularGradientePromedio(int inicioF, int finF, int inicioC, int 
             }
 
             if (vecinos > 0) {
-                // CAMBIO 1: Forzar la división a double para obtener el promedio decimal de la celda.
+                //Forzar la división a double para obtener el promedio decimal de la celda.
                 sumaGradiente += (T)((double)gradienteCelda / vecinos);
                 contador++;
             }
@@ -166,7 +166,7 @@ T Campo2D<T>::calcularGradientePromedio(int inicioF, int finF, int inicioC, int 
     }
 
     if (contador > 0) {
-        // CAMBIO 2: Forzar la división a double para obtener el promedio final.
+        // Forzar la división a double para obtener el promedio final.
         return (T)((double)sumaGradiente / contador);
     }
     return 0;
